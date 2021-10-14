@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { createGlobalStyle } from "styled-components";
+import Calculator from "components/organisms/Calculator/Calculator";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,11 +10,22 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  html, body {
+    height: 100vh;
+
+    & body {
+      background-image: linear-gradient(to top, #0069c0 0%, #6ec6ff 100%);
+    }
+  }
+
+  
 `;
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
+    <Calculator />
   </React.StrictMode>,
   document.getElementById("root")
 );
